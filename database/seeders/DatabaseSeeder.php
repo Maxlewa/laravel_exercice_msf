@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Eleve;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +21,8 @@ class DatabaseSeeder extends Seeder
             TypeformationSeeder::class,
             EleveSeeder::class,
         ]);
+
+        // FACTORY
+        Eleve::factory()->count(50)->create();
     }
 }
