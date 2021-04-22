@@ -23,8 +23,8 @@ class EleveFactory extends Factory
     {
         return [
             "nom" => $this->faker->lastName,
-            "prenom" => $this->faker->firstName($gender = null|'male'|'female'),
-            "age" => $this->numberBetween($min = 0, $max = 120),
+            "prenom" => $this->faker->firstName,
+            "age" => $this->faker->numberBetween($min = 0, $max = 120),
             "etat" => $this->faker->boolean,
             "created_at" => now(),
         ];
