@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Batiment;
+use App\Models\Eleve;
+use App\Models\Formation;
+use App\Models\Typeformation;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -10,15 +14,19 @@ class AdminController extends Controller
         return view('admin.adminHome');
     }
     public function elevesList() {
-        return view('admin.elevesList');
+        $varEleves = Eleve::all();
+        return view('admin.eleves.elevesList', compact('varEleves'));
     }
     public function batimentsList() {
-        return view('admin.batimentsList');
+        $varBatiments = Batiment::all();
+        return view('admin.batiments.batimentsList', compact('varBatiments'));
     }
     public function formationsList() {
-        return view('admin.formationsList');
+        $varFormations = Formation::all();
+        return view('admin.formations.formationsList', compact('varFormations'));
     }
     public function typesList() {
-        return view('admin.typesList');
+        $varTypes = Typeformation::all();
+        return view('admin.types.typesList', compact('varTypes'));
     }
 }
