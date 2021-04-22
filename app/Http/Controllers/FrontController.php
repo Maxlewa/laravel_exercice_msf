@@ -29,7 +29,4 @@ class FrontController extends Controller
         $varTypesdeformations = Typeformation::all();
         return view('pages.typesdeformations', compact('varTypesdeformations'));
     }
-    public function adminHome() {
-        return view('admin.adminHome');
-    }
 }
